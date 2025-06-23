@@ -74,7 +74,7 @@ p {
 p, a {
     font-family: $secondary-font;
     font-size: $body-size;
-    line-height: 1.3em;
+    line-height: 1.4em;
     text-transform: initial;
 }
 i {text-align: center;}
@@ -116,7 +116,7 @@ a.button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 
     font-family: $primary-font;
     font-size: $body-size;
@@ -130,15 +130,46 @@ a.button {
     transition: 0.3s 0s, background-position 0.3s calc(0.3s - 0s);
 
     &.button__fill {
-        border: 1px solid $secondary-color;
+        border: 3px solid $secondary-color;
         background-color: $secondary-color;
         color: $primary-color;
     }
 
     &.button__outline {
-        border: 1px solid $secondary-color;
+        border: 3px solid $secondary-color;
         background-color: $primary-color;
         color: $secondary-color;
+    }
+
+    &.button__icon-download,
+    &.button__icon-external {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        
+        &::after {
+            content: '';
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 12px;
+            min-width: 12px;
+            height: 12px;
+            transition: all 1.4s;
+        }
+    }
+    &.button__icon-download::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23ffffff' d='M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z'/%3E%3C/svg%3E");
+        
+        &:hover::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23282828' d='M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 242.7-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7 288 32zM64 352c-35.3 0-64 28.7-64 64l0 32c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-32c0-35.3-28.7-64-64-64l-101.5 0-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352 64 352zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z'/%3E%3C/svg%3E");
+        }
+    }
+    &.button__icon-external::after {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23282828' d='M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z'/%3E%3C/svg%3E");
     }
 
     &:hover {
@@ -148,10 +179,34 @@ a.button {
         color: $dark-color;
     }
 }
+.link__icon-phone,
+.link__icon-email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    &::before {
+        content: '';
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 12px;
+        min-width: 12px;
+        height: 12px;
+    }
+}
+.link__icon-phone::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23282828' d='M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z'/%3E%3C/svg%3E");
+}
+.link__icon-email::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--%3E%3Cpath fill='%23282828' d='M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z'/%3E%3C/svg%3E");
+}
 div.columns__big {
     display: flex;
-    column-gap: 60px;
-    row-gap: 60px;
+    gap: 60px;
     justify-content: space-between;
 }
 div.columns__small {
@@ -206,7 +261,7 @@ div.columns__small {
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            padding: 5px 0;
+            padding: 5px;
         }
         .card__content {
             padding: 40px 50px;
@@ -215,6 +270,7 @@ div.columns__small {
         &.education, &.experience {
             .year {
                 font-size: $small-size;
+                font-style: italic;
                 color: $secondary-color;
                 margin-bottom: 0;
             }
@@ -256,6 +312,7 @@ div.columns__small {
                         color: #1a1e2699;
                         font-family: $secondary-font;
                         font-size: $small-size;
+                        font-style: italic;
                         font-weight: normal;
                         line-height: none;
                     }
@@ -286,11 +343,6 @@ div.columns__small {
         flex-direction: column;
     }
 }
-.card__icon {
-    text-align: center;
-    font-size: $secondary-size;
-    color: $dark-color;
-}
 .pipeline {font-weight: bold;}
 .button__group {
     display: flex;
@@ -304,14 +356,19 @@ div.columns__small {
 
 /* HEADER */
 header {
+    .logo img {
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
     nav{
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        div:first-child {width: 50%;} 
-        div:last-child {width: 45%;}
+        div:first-child {width: 30%;} 
+        div:last-child {width: 70%;}
     }
 }
 ul.menu {
@@ -324,6 +381,9 @@ ul.menu {
     justify-content: space-between;
     align-items: center;
 
+    .menu__item {
+        padding: 0;
+    }
     .menu__item a {
         text-decoration: none;
         text-transform: uppercase;
@@ -368,6 +428,9 @@ section#about-me {
     }
     div.image {width: 35%;}
     div.information {width: 65%;}
+    .button__group {
+        margin-top: 30px;
+    }
 }
 
 /* PROJECTS */
@@ -387,54 +450,55 @@ section#projects {
         }
     }
     .card {
-        border: 3px solid $primary-color;
+        display: flex;
+        flex-direction: column;
+        border: 0;
         background-color: $primary-color;
-        display: block;
         padding: 0;
         transition: all 0.3s;
         margin-top: 0;
-
-        &:hover {
-            margin-top: -10px;
+        &::before {
+            content: '';
+            display: block;
         }
 
         .projects__image {
-            a {
-                line-height: 0;
-                margin: 0;
-
-                img {
-                    width: 100%;
-                    margin-bottom: 10px;
-                    border-radius: 5px 5px 0 0;
-                }
+            img {
+                width: 100%;
             }
         }
         .projects__text {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            height: 100%;
 
-            a {
-                font-weight: bold;
-                text-decoration: none;
-                span {
-                    font-size: $small-size;
-                    font-weight: normal;
-                }
+            p {
+                padding: 20px;
             }
+            a.button {
+                border-radius: 0 0 5px 5px;
+                border-left-width: 0;
+                border-right-width: 0;
+            }
+        }
+        a.button {
+            margin-top: auto;
+            margin-bottom: 0;
         }
     }
 }
 /* PLATFORMS */
 section#platforms {
     background-color: $primary-color;
-    padding: 80px 0 150px 0;
 
     .section__title {
         color: $secondary-color;
     }
     .section__title, .accent__text {text-align: center;}
     div.columns__big {
-        margin-top: 60px;
+        margin-top: 50px;
         justify-content: center!important;
     }
     .platforms__logo {
@@ -447,6 +511,22 @@ section#platforms {
 footer {
     background-color: $primary-color;
 
+    div,
+    div p:not(:first-of-type, .accent__text) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        &:not(p) {
+            width: 100%;
+        }
+        p:not(:first-of-type)::before {
+            content: '|';
+        }
+    }
     a {
         text-decoration: none;
         background: linear-gradient($extra-color 0 0) no-repeat calc(200% - 0%)
@@ -461,74 +541,90 @@ footer {
     }
     p {
         text-align: center;
-        line-height: 0;
         margin: 0;
     }
-    .pipeline {padding: 0 20px;}
 }
 
 /* DESKTOP ONLY VIEW*/
-/*@media only screen and (min-width: 1024px) {}*/
+/*@media only screen and (min-width: 1079px) {}*/
 /* END DESKTOP ONLY VIEW */
 
 /* TABLET VIEW */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1079px) {
+    header {padding: 15px 30px;}
+    header::before, section::before, footer::before {right: 15px;}
+    header::after, section::after, footer::after {left: 15px;}
     .grid {max-width: 100%;}
-    .section__title {text-align: center;}
+    section {padding: 40px 30px;}
     .tabs {
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
     }
-    header {
-        nav {
-            div:last-child {width: 50%;}
+    .tab__experience-content,
+    .tab__projects-content {
+        .card {
+            .card__content {
+                padding: 20px;
+            }
         }
     }
+    div.columns__big {
+        gap: 40px;
+    }
+    a.button.button__icon-download,
+    a.button.button__icon-external {
+        justify-content: center;
+    }
     section#hero {
-        max-width: 100%;
         .section__title {line-height: 1.2em;}
         button {margin-top: 20px !important;}
     }
     section#about-me {
-        button {margin-top: 30px;}
         div.columns__big {
             flex-direction: column;
             align-items: center;
         }
+        a.button {
+            text-align: center;
+            width: 100%;
+        }
     }
-    section#about-me,
-    section#my-experience,
-    section#projects {
-        padding: 50px;
+    section#platforms {
+        padding: 80px 30px;
+        .platforms__logo {
+            height: 30px;
+        }
     }
-    section#platforms {padding: 50px 50px 150px;}
     section#about-me div.image, section#about-me div.information {width: 100%;}
     section#about-me div.image {display: none;}
-    section#my-experience {
-        div#experience-tab3 {
-            .columns__small {
-                flex-direction: column;
-                .card {width: auto;}
-            }
-        }
-        .card {padding: 25px;}
-    }
     section#projects {
         div.columns__small {
-            justify-content: space-between;
             flex-wrap: wrap;
             .card {
-                display: inline-block;
-                width: 45%;
+                width: calc(50% - 10px);
             }
         }
     }
 }
 /* END TABLET VIEW */
+
 /* MOBILE VIEW */
 @media only screen and (max-width: 700px) {
-    a.logo {font-size: 1.2rem;}
+    header {display: none;}
+    section#hero {
+        .section__title {font-size: 3rem;}
+        .accent__text {
+            br {display: none;}
+        }
+    }
+    section#about-me,
+    section#my-experience,
+    section#projects {
+        div.columns__small {
+            .card {width: 100%;}
+        }
+    }
     div.columns__big,
     div.columns__small {
         display: flex;
@@ -541,48 +637,22 @@ footer {
     }
     .tab__experience-content,
     .tab__projects-content {
-        margin-top: 0;
         .card {
             display: inline-block;
             width: 100%;
         }
     }
     a {margin: 0;}
-    header {display: none;}
-    .section__title {font-size: 35px;}
-    section#about-me,
-    section#my-experience,
-    section#projects {
-        padding: 30px;
-        div.columns__small {
-            .card {width: 100%;}
-        }
-    }
-    section#hero {
-        margin: 50px 30px;
-        .section__title {font-size: 2.8rem;}
-    }
-    section#about-me {
-        div.columns__small {
-            align-items: stretch;
-            grid-gap: 0;
-        }
-    }
-    section#platforms {
-        padding: 50px 50px 80px;
-        div.columns__big {
-            margin-top: 35px;
-            grid-gap: 30px;
-            grid-row-gap: 30px;
-            .platforms__logo {height: 45px;}
-            &:last-child {margin-top: 30px;}
-        }
-    }
+    .accent__text, .accent__text a {font-size: 1rem;}
+    .section__title {font-size: 1.5rem;}
     footer {
-        .pipeline {display: none;}
-        a.email {
-            display: block;
-            margin: 5px 0 15px;
+        div,
+        div p:not(:first-of-type, .accent__text) {
+            flex-direction: column;
+            gap: 10px;
+        }
+        p:not(:first-of-type)::before {
+            display: none;
         }
     }
 }
