@@ -1,0 +1,24 @@
+$primary-font: "Sometype Mono", monospace;
+$secondary-font: "Roboto", sans-serif;
+
+$primary-color: #FFF;
+$secondary-color: #282828;
+$extra-color: #9AD4FF;
+
+$dark-color: #000;
+$light-color: #FBFBFB;
+$border-light-color: #F0EEEE;
+$border-dark-color: #3c3c3c;
+$extra-light-color: #d5d5d5;
+
+$primary-size: 6rem;
+$secondary-size: 3rem;
+$accent-size: 1.1rem;
+$body-size: 1.1rem;
+$small-size: 0.9rem;
+
+$grid-container: 1080px;
+
+@media screen and (max-width: 1079px) {
+    $grid-container: 100%;
+}

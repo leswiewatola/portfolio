@@ -1,0 +1,366 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Leslie's Portfolio | Front-End Web Development</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sometype+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <!-- HEADER -->
+        <header id="scroll-up">
+            <nav class="grid">
+                <div>
+                    <a href="#" class="logo"></a>
+                </div>
+                <div>
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#about-me">About me</a></li>
+                        <li class="menu__item"><a href="#my-experience">My experience</a></li>
+                        <li class="menu__item"><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER -->
+        <!-- HERO SECTION -->
+        <section id="hero">
+            <div class="grid">
+                <p class="accent__text">Hola, my name is <strong>Leslie Watola</strong> and this is my</p>
+                <h1 class="section__title">Portfolio</h1>
+                <p class="accent__text">I’m a Front-End Web Developer with 4+ years of experience,<br/>nice to meet you! 👋</p>
+                <div class="button__group">
+                    <a href="https://www.linkedin.com/in/lesliewatola/" target="_blank" class="button button__fill">Find me in LinkedIn</a>
+                    <a href="mailto:watolaleslie@gmail.com" target="_blank" class="button button__outline">Send me an Email</a>
+                </div>
+            </div>
+        </section>
+        <!-- END HERO SECTION -->
+        <!-- ABOUT ME SECTION -->
+        <section id="about-me">
+            <div class="grid">
+                <div class="columns__big">
+                    <div class="image">
+                        <img src="img/me.jpg"></img>
+                    </div>
+                    <div class="information">
+                        <h2 class="section__title">About me</h2>
+                        <p>I’m a web developer who’s passionate about clean code and getting the details right.</p>
+                        <p>I take pride in being a reliable team member and contributing wherever I’m needed. Whether it’s lending a hand, learning something new, or tackling a problem, I’m always ready to jump in. I stay organized, pay close attention to detail, and can juggle multiple tasks without losing focus.</p>
+                        <p>One thing I take seriously is staying true to the designer’s vision. If something is off by a few pixels I’ll catch it. I believe the integrity of the design is just as important as the functionality, and I do my best to make sure both shine through.</p>
+                        <p>QA is actually one of my favorite parts of the process (no, really), and I always aim to deliver polished work that meets both the client’s needs and the deadline.</p>
+                        <p>Right now, I’m diving deeper into UX because I love creating things that aren’t just functional but intuitive and enjoyable to use. Always learning, always building.</p>
+                        <div class="button__group">
+                            <a href="pdf/CV.pdf" target="_blank" class="button button__fill">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END ABOUT ME SECTION -->
+        <!-- MY EXPERIENCE SECTION -->
+        <section id="my-experience">
+            <div class="grid">
+                <h2 class="section__title">My experience</h2>
+                <div class="tabs">
+                    <a class="tab__experience-link accent__text active" onclick="openExperience(event, 'experience-tab1')">Education</a>
+                    <a class="tab__experience-link accent__text" onclick="openExperience(event, 'experience-tab2')">Skills</a>
+                    <a class="tab__experience-link accent__text" onclick="openExperience(event, 'experience-tab3')">Experience</a>
+                </div>
+                <div id="experience-tab1" class="tab__experience-content" style="display: block;">
+                    <div class="columns__small">
+                        <div class="card education">
+                            <h3 class="card__title">Education</h3>
+                            <div class="card__content">
+                                <p class="year">2015 - 2020</p>
+                                <p class="degree">Computer Engineering - Bachelor's</p>
+                                <p class="institution">Universidad Autónoma de Baja California<br/>(Autonomous University of Baja California)</p>
+                                <hr/>
+                                <p class="year">2011 - 2014</p>
+                                <p class="degree">Graphic Design</p>
+                                <p class="institution">Preparatoria Federal Lázaro Cárdenas<br/>(Federal High School Lázaro Cárdenas)</p>
+                            </div>
+                        </div>
+                        <div class="card education">
+                            <h3 class="card__title">Languages</h3>
+                            <div class="card__content">
+                                <div class="language">
+                                    <h4>Spanish <span class="percentage">Native</span></h4>
+                                    <div class="bar">
+                                        <hr width="100%"/>
+                                    </div>                               
+                                </div>
+                                <div class="language">
+                                    <h4>English <span class="percentage">Second Language (90%)</span></h4>
+                                    <div class="bar">
+                                        <hr width="90%"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="experience-tab2" class="tab__experience-content">
+                    <div class="columns__small">
+                        <div class="card skills">
+                            <h3 class="card__title">Development</h3>                            
+                            <div class="card__content">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS & Sass & Less</li>
+                                    <li>JavaScript</li>
+                                    <li>PHP</li>
+                                    <hr>
+                                    <li>Learning React & Vue</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card skills">
+                            <h3 class="card__title">Design</h3>
+                            <div class="card__content">                         
+                                <ul>
+                                    <li>Figma</li>
+                                    <li>Ai</li>
+                                    <li>Ps</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card skills">
+                            <h3 class="card__title">Soft</h3>
+                            <div class="card__content">                          
+                                <ul>
+                                    <li>Empathy</li>
+                                    <li>Time management</li>
+                                    <li>Teamwork</li>
+                                    <li>Adaptability</li>
+                                    <li>Problem-solving</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="experience-tab3" class="tab__experience-content">
+                    <div class="columns__small">
+                        <div class="card experience">
+                            <h3 class="card__title">Yoko Consulting</h3>
+                            <div class="card__content"> 
+                                <p class="year">August 2022 - Current</p>
+                                <p class="position">Front-End Web Developer</p>
+                                <ul class="description">
+                                    <li><p>Build and configure responsive WordPress websites based on provided design concepts.</p></li>
+                                    <li><p>Collaborate with UX and design teams to implement strategic, technical, and functional requirements in the final build.</p></li>
+                                    <li><p>Contribute to the ongoing improvement of the development framework, tools, and coding standards.</p></li>
+                                    <li><p>Ensure all code and deliverables meet company standards for format, structure, and performance, and adhere to established workflows.</p></li>
+                                    <li><p>Deploy pages as needed using the established tech stack, including WordPress, Gutenberg, and Beaver Builder.</p></li>
+                                    <li><p>Perform general QA, responsive testing, functional testing, and troubleshooting.</p></li>
+                                    <li><p>Handle a variety of client-submitted tasks, including content edits, new feature requests, bug fixes, and site optimizations.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card experience">
+                            <h3 class="card__title">Dude Agency</h3>
+                            <div class="card__content"> 
+                                <p class="year">May 2021 - August 2022</p>
+                                <p class="position">Pod Leader</p>
+                                <ul class="description">
+                                    <li><p>Led a multidisciplinary team of graphic designers and developers with varying levels of experience.</p></li>
+                                    <li><p>Managed and reviewed web development projects, ensuring quality and timely delivery.</p></li>
+                                    <li><p>Maintained ongoing communication with clients to clarify questions, provide updates, and stay aligned with their goals.</p></li>
+                                    <li><p>Worked across multiple platforms based on client needs, with WordPress as the primary CMS for web development and Adobe XD for design work.</p></li>
+                                    <li><p>Handled a wide range of tasks submitted by clients through a ticketing system, including design updates, content edits, new feature requests, and troubleshooting.</p></li>
+                                </ul>
+                                <hr/>
+                                <p class="year">January 2021 - May 2021</p>
+                                <p class="position">Web Developer (Pod Member)</p>
+                                <ul class="description">
+                                    <li><p>Managed a wide variety of daily projects as part of an outsourced web development team.</p></li>
+                                    <li><p>Handled tasks ranging from website maintenance, development, and hosting to performance optimization and implementing new elements like pop-ups, forms, and custom features.</p></li>
+                                    <li><p>Worked across a diverse range of websites, platforms, page builders, themes, and templates, adapting to each project's unique requirements.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card experience">
+                            <h3 class="card__title">Studio Arsa</h3>
+                            <div class="card__content"> 
+                                <p class="year">March 2020 - November 2020</p>
+                                <p class="position">Head Of The Web Development Team</p>
+                                <ul class="description">
+                                    <li><p>Managed web projects while collaborating closely with the web design team to improve user experience (UX).</p></li>
+                                    <li><p>Continued handling website maintenance and development, with added responsibilities including ad campaign tracking, monthly SEO audit follow-ups, and site performance optimizations.</p></li>
+                                    <li><p>Provided technical support for hosting and domain-related issues.</p></li>
+                                    <li><p>Although not in direct contact with clients, created video tutorials to help them understand and manage the work we delivered.</p></li>
+                                </ul>
+                                <hr/>
+                                <p class="year">January 2020 - March 2020</p>
+                                <p class="position">WordPress Developer</p>
+                                <ul class="description">
+                                    <li><p>Developed and maintained WordPress websites and e-commerce platforms, primarily using WooCommerce and Shopify.</p></li>
+                                    <li><p>Handled design adjustments, including modifying graphics and icons from mockups when needed.</p></li>
+                                    <li><p>Managed website hosting, deploying sites either on internal servers or on clients’ preferred hosting environments.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END MY EXPERIENCE SECTION -->
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <div class="grid">
+                <h2 class="section__title">Projects</h2>
+                <div class="tabs">
+                    <a class="tab__projects-link accent__text active" onclick="openProjects(event, 'projects-tab1')">Development</a>
+                    <a class="tab__projects-link accent__text" onclick="openProjects(event, 'projects-tab2')">Design</a>
+                </div>
+                <div id="projects-tab1" class="tab__projects-content" style="display: block;">
+                    <div class="columns__small">
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://pcna.net/" target="_blank">
+                                    <img src="img/projects/wordpress_BB-custom-theme-custom-menu-2.jpg" alt="Wordpress Beaver Builder Custom Theme Custom Menu Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://pcna.net/" target="_blank">Wordpress:<br/><span>Beaver Builder<br/>Custom Theme<br/>Custom Menu/Navigation</span></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://www.aaaa.org/" target="_blank">
+                                    <img src="img/projects/wordpress_BB-custom-theme-custom-menu.jpg" alt="Wordpress Beaver Builder Custom Theme Custom Menu Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://www.aaaa.org/" target="_blank">Wordpress:<br/><span>Beaver Builder<br/>Custom Theme<br/>Custom Menu/Navigation</span></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://www.hrsonline.org/" target="_blank">
+                                    <img src="img/projects/wordpress_BB-custom-theme.jpg" alt="Wordpress Beaver Builder Custom Theme Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://www.hrsonline.org/" target="_blank">Wordpress:<br/><span>Beaver Builder<br/>Custom Theme</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://www.yogawithkileen.com/" target="_blank">
+                                    <img src="img/projects/squarespace_personalized-template.jpg" alt="Squarespace Personalized Template Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://www.yogawithkileen.com/" target="_blank">Squarespace:<br/><span>Personalized Template</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects-tab2" class="tab__projects-content">
+                    <div class="columns__small">
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://xd.adobe.com/view/da4f7e19-6673-4d11-979d-99d02607f8a0-8f1c/grid" target="_blank">
+                                    <img src="img/projects/xd_homepage-blog.jpg" alt="XD Adobe Homepage & Blog Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://xd.adobe.com/view/da4f7e19-6673-4d11-979d-99d02607f8a0-8f1c/grid" target="_blank">XD Adobe:<br/><span>Homepage & Blog</span></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://xd.adobe.com/view/d01c4cee-c356-48e8-b230-2a25a28bcf30-854f/grid" target="_blank">
+                                    <img src="img/projects/xd_food-industry-template.jpg" alt="XD Adobe Food Industry Template Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://xd.adobe.com/view/d01c4cee-c356-48e8-b230-2a25a28bcf30-854f/grid" target="_blank">XD Adobe:<br/><span>Food Industry Template</span></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://www.figma.com/file/hFd320HAzN7LK7YxHikGSc/E-commerce" target="_blank">
+                                    <img src="img/projects/figma_style-tile.jpg" alt="Figma Style Tile Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://www.figma.com/file/hFd320HAzN7LK7YxHikGSc/E-commerce" target="_blank">Figma:<br/><span>Style Tile</span></a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="projects__image">
+                                <a href="https://www.figma.com/file/F13ZcD6hUQXgW6mj3nZWGa/Mextli" target="_blank">
+                                    <img src="img/projects/figma_mobile-app.jpg" alt="Figma Mobile App Project">
+                                </a>
+                            </div>
+                            <div class="projects__text">
+                                <a href="https://www.figma.com/file/F13ZcD6hUQXgW6mj3nZWGa/Mextli" target="_blank">Figma:<br/><span>Mobile App</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END PROJECTS SECTION -->
+        <!-- PLATFORMS SECTION -->
+        <section id="platforms">
+            <div class="grid">
+                <p class="accent__text">I have experience working with the following</p>
+                <h2 class="section__title">Platforms</h2>
+                <div class="columns__big">
+                    <div>
+                        <a href="https://wordpress.com/" title="WordPress" target="_blank"><img class="platforms__logo" src="img/platforms/wordpress.png" alt="Wordpress"></a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/" title="Github" target="_blank"><img class="platforms__logo" src="img/platforms/github.png" alt="Github"></a>                 
+                    </div>
+                    <div>
+                        <a href="https://webflow.com/" title="Webflow" target="_blank"><img class="platforms__logo" src="img/platforms/webflow.png" alt="Webflow"></a>             
+                    </div>
+                    <div>
+                        <a href="https://www.gohighlevel.com/" title="HighLevel" target="_blank"><img class="platforms__logo" src="img/platforms/highlevel.png" alt="HighLevel"></a>         
+                    </div>
+                    <div>
+                        <a href="https://www.shopify.com/" title="Shopify" target="_blank"><img class="platforms__logo" src="img/platforms/shopify.png" alt="Shopify"></a>                    
+                    </div>
+                    <div>
+                        <a href="https://slack.com/" title="Slack" target="_blank"><img class="platforms__logo" src="img/platforms/slack.png" alt="Slack"></a>                    
+                    </div>
+                </div>
+                <div class="columns__big">
+                    <div>
+                        <a href="https://vwo.com/" title="VWO" target="_blank"><img class="platforms__logo" src="img/platforms/vwo.png" alt="VWO"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.squarespace.com/" title="Squarespace" target="_blank"><img class="platforms__logo" src="img/platforms/squarespace.png" alt="Squarespace"></a>                     
+                    </div>
+                    <div>
+                        <a href="https://kinsta.com/" title="Kinsta" target="_blank"><img class="platforms__logo" src="img/platforms/kinsta.png" alt="Kinsta"></a>                     
+                    </div>
+                    <div>
+                        <a href="https://code.visualstudio.com/" title="Visual Studio Code" target="_blank"><img class="platforms__logo" src="img/platforms/visual-studio-code.png" alt="Visual Studio Code"></a>                     
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END PLATFORMS SECTION -->
+        <!-- SCRIPTS -->
+        <script src="js/toggle.js"></script>
+        <!-- END CRIPTS -->
+        <!-- FOOTER -->
+        <footer>
+            <div>
+                <p class="accent__text"><strong>Leslie</strong> Watola <span class="pipeline">|</span> <a href="tel:7068012160" class="phone">(706) 801 2160</a> <span class="pipeline">|</span> <a href="mailto:watolaleslie@gmail.com" class="email">watolaleslie@gmail.com</a> <span class="pipeline">|</span> <span class="year">©2025</span></p>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+    </div>
+</body>
+</html>
